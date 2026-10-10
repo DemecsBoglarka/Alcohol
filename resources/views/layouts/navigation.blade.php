@@ -1,5 +1,5 @@
 <nav>
-  <a href="{{ url('/') }}">Kezdőlap</a>
-  <a href="{{ route('counties.index') }}">Alkoholok</a>
-  <a href="">Kategóriák</a>
+  <a href="navigation.blade.php">Kezdőlap</a>
+  <a href="{{route('alcohols.index')}}">Alkoholok</a>
+  <a href="{{route('categories.index')}}">Kategóriák</a>
 </nav>
