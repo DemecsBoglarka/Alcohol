@@ -6,14 +6,15 @@
     <a href="{{route('categories.create')}}">Új kategória</a>
 
     @foreach($categories as $category)
-        <p>{{$category->name}}</p>
-
+        <hr>
+        <span>{{$category->name}}</span>
         <a href="{{route('categories.edit', $category->id)}}">Szerkesztés</a>
-        <form action="{{route('categories.destroy', $categiry->id)}}" method="POST">
+        <form action="{{route('categories.destroy', $category->id)}}" method="POST">
             @csrf
             @method('DELETE')
             <button type="submit">Törlés</button>
         </form>
+        <br>
     @endforeach
 
 @endsection

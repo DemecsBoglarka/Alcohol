@@ -4,15 +4,12 @@
 
 @section('content')
 <h1>Alkohol adatainak módosítása</h1>
-
-  @include('layouts.flash')
-
-  <form action="{{route('alcohols.update', $entity->id)}}" method="POST">
+  <form action="{{route('alcohols.update', $alcohol->id)}}" method="POST">
       @csrf
       @method('PATCH')
 
       <label for="name">Alkohol neve</label>
-      <input type="text" name="name" id="name" value="{{old('name', $entity->name)}}" required>
+      <input type="text" name="name" id="name" value="{{old('name', $alcohol->name)}}" required>
       @error('name')
           <div class="error">{{ $message }}</div>
       @enderror

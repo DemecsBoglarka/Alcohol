@@ -26,7 +26,6 @@ class AlcoholController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'zip_code' => ['required', 'string', 'max:20'],
             'category_id' => ['required', 'exists:categories,id'],
         ]);
 
@@ -51,8 +50,7 @@ class AlcoholController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'zip_code' => ['required', 'string', 'max:20'],
-            'category_id' => ['required', 'exists:categories,id'],
+//            'category_id' => ['required', 'exists:categories,id'],
         ]);
 
         $alcohol->update($validated);

@@ -15,15 +15,13 @@ class AlcoholSeeder extends Seeder
         foreach ($categories as $category) {
 
             Alcohol::create([
-                'name' => $alcohol->name . ' alcohol 1',
-                'zip_code' => '1000',
-                'alcohol_id' => $alcohol->id,
+                'name' => $category->name . ' 1',
+                'category_id' => $category->id,
             ]);
 
             Alcohol::create([
-                'name' => $alcohol->name . ' alcohol 2',
-                'zip_code' => '2000',
-                'alcohol_id' => $alcohol->id,
+                'name' => $category->name . ' 2',
+                'category_id' => $category->id,
             ]);
         }
     }

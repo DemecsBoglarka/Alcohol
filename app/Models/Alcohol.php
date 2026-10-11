@@ -10,7 +10,6 @@ class Alcohol extends Model
 
     protected $fillable = [
         'name',
-        'zip_code',
         'category_id'
     ];
 

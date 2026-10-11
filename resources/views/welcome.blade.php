@@ -3,6 +3,7 @@
 @section('content')
 <h1>Kezdőlap</h1>
 
-<p>Hello</p>
+<p>Demecs Boglárka</p>
+<p>Alkoholok</p>
 
 @endsection
