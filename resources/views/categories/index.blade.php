@@ -3,7 +3,7 @@
 @section('content')
 
     <h1>Kategória</h1>
-    <a href="{{route('counties.create')}}">Új kategória</a>
+    <a href="{{route('categories.create')}}">Új kategória</a>
 
     @foreach($categories as $category)
         <p>{{$category->name}}</p>
