@@ -8,11 +8,20 @@ use Illuminate\Http\Request;
 
 class AlcoholController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $alcohols = Alcohol::with('category')->get();
+        $categories = Category::all();
+        $selCategoryId = $request->input('selCategoryId');
+        if ($selCategoryId != null) {
+            $alcohols = Alcohol::with('category')->when($selCategoryId, function ($query, $selCategoryId) {
+                return $query->where('category_id', $selCategoryId);
+            })->get();
+        }
+        else {
+            $alcohols = Alcohol::with('category')->get();
+        }
 
-        return view('alcohols.index', compact('alcohols'));
+        return view('alcohols.index', compact('alcohols', 'categories', 'selCategoryId'));
     }
 
     public function create()
