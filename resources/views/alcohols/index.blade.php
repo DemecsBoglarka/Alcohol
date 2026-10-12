@@ -17,7 +17,7 @@
             @endif
         @endforeach
     </select>
-    <a href="{{route('alcohols.create')}}">Új alkohol</a>
+    <a href="{{route('alcohols.create', ['selCategoryId' => $selCategoryId])}}">Új alkohol</a>
 
     @foreach($alcohols as $alcohol)
         <hr>

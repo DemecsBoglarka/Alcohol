@@ -24,11 +24,12 @@ class AlcoholController extends Controller
         return view('alcohols.index', compact('alcohols', 'categories', 'selCategoryId'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $categories = Category::all();
+        $selCategoryId = $request->input('selCategoryId');
 
-        return view('alcohols.create', compact('categories'));
+        return view('alcohols.create', compact('categories', 'selCategoryId'));
     }
 
     public function store(Request $request)
