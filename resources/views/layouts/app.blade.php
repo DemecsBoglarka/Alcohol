@@ -8,7 +8,7 @@
         <link href="{{asset('../resources/css/bootstrapCss/bootstrap.css')}}" rel="stylesheet" type="text/css">
     </head>
 
-    <body style="padding: 1%;">
+    <body style="padding: 1%; background-size: contain; background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('../resources/imgs/drunk.gif');">
         @include('layouts.navigation')
         <main>
             @yield('content')
