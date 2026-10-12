@@ -2,6 +2,10 @@
 
 @section('content')
 
+<?php
+    use App\Models\Category;
+?>
+
     <h1>Alkoholok</h1>
     <select name="categories" id="categories" onchange="window.location.href=this.value">
         <option value="{{route('alcohols.index', ['selCategoryId' => null])}}">Összes</option>
@@ -19,7 +23,7 @@
         <hr>
         <span>Név: {{$alcohol->name}}</span>
         <br>
-        <span>Kategória: {{$alcohol->category_id}}</span>
+        <span>Kategória: {{Category::find($alcohol->category_id)->name}}</span>
         <br>
 
         <a href="{{route('alcohols.edit', $alcohol->id)}}">Szerkesztés</a>

@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{csrf_token()}}">
         <title>{{config('app.name', 'LaravelApp')}}</title>
-        <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
-        <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+        <script src="{{asset('../resources/js/bootstrapJs/bootstrap.js')}}" type="text/javascript"></script>
+        <link href="{{asset('../resources/css/bootstrapCss/bootstrap.css')}}" rel="stylesheet" type="text/css">
     </head>
 
-    <body>
+    <body style="padding: 1%;">
         @include('layouts.navigation')
         <main>
             @yield('content')
