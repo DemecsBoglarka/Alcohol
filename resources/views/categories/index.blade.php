@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Kategória</h1>
+    <h1>Kategóriák</h1>
     <a href="{{route('categories.create')}}">Új kategória</a>
 
     @foreach($categories as $category)
